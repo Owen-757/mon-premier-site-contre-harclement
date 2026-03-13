@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aide Harcèlement</title>
+</head>
+
+<body>
+
+<h1>Plateforme d’aide contre le harcèlement</h1>
+
+<p>Ce site permet aux élèves de parler anonymement et de demander de l’aide.</p>
+
+<h2>Que veux-tu faire ?</h2>
+
+<a href="signaler.html">
+<button>Signaler une situation</button>
+</a>
+
+<br><br>
+
+<a href="ressources.html">
+<button>Voir les ressources d’aide</button>
+</a>
+
+</body>
+</html>
