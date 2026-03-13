@@ -1,8 +1,0 @@
-<style>
-body{
-background:black;
-color:white;
-text-align:center;
-font-family:Arial;
-}
-</style>
