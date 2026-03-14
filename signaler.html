@@ -12,7 +12,7 @@
 
 body{
 font-family: Arial, sans-serif;
-background:#0f172a;
+background: linear-gradient(135deg,#0f172a,#1e293b);
 color:white;
 margin:0;
 display:flex;
@@ -22,60 +22,98 @@ min-height:100vh;
 text-align:center;
 }
 
+/* carte centrale */
+
 .container{
 max-width:500px;
-padding:25px;
+padding:30px;
+background:#1e293b;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
+/* texte */
+
 h1{
-font-size:30px;
-margin-bottom:15px;
+font-size:28px;
+margin-bottom:10px;
 }
 
 p{
-font-size:18px;
-opacity:0.9;
-margin-bottom:25px;
+font-size:16px;
+opacity:0.85;
+margin-bottom:20px;
 }
+
+/* labels */
 
 label{
 display:block;
 margin-top:15px;
-font-size:16px;
+font-size:15px;
 text-align:left;
+opacity:0.9;
 }
+
+/* champs */
 
 textarea, input{
 width:100%;
-padding:12px;
+padding:14px;
 margin-top:6px;
-border-radius:8px;
+border-radius:10px;
 border:none;
-font-size:16px;
+background:#334155;
+color:white;
+font-size:15px;
 }
 
 textarea{
 min-height:120px;
+resize:none;
 }
+
+/* placeholder */
+
+::placeholder{
+color:#cbd5f5;
+opacity:0.6;
+}
+
+/* boutons */
 
 button{
 width:100%;
-padding:18px;
-font-size:18px;
+padding:16px;
+font-size:17px;
 border:none;
 border-radius:12px;
 margin-top:20px;
 cursor:pointer;
+transition:0.2s;
+}
+
+button:hover{
+transform:scale(1.03);
+opacity:0.95;
+}
+
+.envoyer{
 background:#ef4444;
 color:white;
 }
 
-button:hover{
-opacity:0.9;
-}
-
 .retour{
 background:#2563eb;
+color:white;
+}
+
+/* message sécurité */
+
+.info{
+font-size:13px;
+opacity:0.7;
+margin-top:10px;
 }
 
 </style>
@@ -88,28 +126,40 @@ background:#2563eb;
 
 <h1>🚨 Signaler une situation</h1>
 
-<p>Explique ta situation. Tu peux rester totalement anonyme.</p>
+<p>
+Explique ce qu’il se passe. Tu peux rester totalement anonyme.
+</p>
 
-<form action="https://formspree.io/f/xaqpbvwo" method="POST">
+<p class="info">
+🔒 Ton message peut être envoyé sans donner ton nom.
+</p>
 
-<label>Décris la situation :</label>
-<textarea name="message"></textarea>
+<form action="https://formspree.io/f/xyknppbg" method="POST">
+
+<input type="text" name="_gotcha" style="display:none">
+
+<label>Décris la situation</label>
+<textarea name="message" placeholder="Explique ce qu'il se passe..."></textarea>
 
 <label>Depuis combien de temps ?</label>
-<input type="text" name="duree">
+<input type="text" name="duree" placeholder="ex : quelques semaines">
 
 <label>Lieu (classe, réseaux sociaux...)</label>
-<input type="text" name="lieu">
+<input type="text" name="lieu" placeholder="ex : classe, Instagram...">
 
 <label>Si tu veux être recontacté (optionnel)</label>
-<input type="email" name="email">
+<input type="email" name="email" placeholder="ton email (facultatif)">
 
-<button type="submit">Envoyer le message</button>
+<button class="envoyer" type="submit">
+Envoyer le message
+</button>
 
 </form>
 
 <a href="index.html">
-<button class="retour">⬅ Retour</button>
+<button class="retour">
+⬅ Retour à l'accueil
+</button>
 </a>
 
 </div>
