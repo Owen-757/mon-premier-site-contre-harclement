@@ -1,40 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Signaler une situation</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background:#0f172a;
+color:white;
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+text-align:center;
+}
+
+.container{
+max-width:500px;
+padding:25px;
+}
+
+h1{
+font-size:30px;
+margin-bottom:15px;
+}
+
+p{
+font-size:18px;
+opacity:0.9;
+margin-bottom:25px;
+}
+
+label{
+display:block;
+margin-top:15px;
+font-size:16px;
+text-align:left;
+}
+
+textarea, input{
+width:100%;
+padding:12px;
+margin-top:6px;
+border-radius:8px;
+border:none;
+font-size:16px;
+}
+
+textarea{
+min-height:120px;
+}
+
+button{
+width:100%;
+padding:18px;
+font-size:18px;
+border:none;
+border-radius:12px;
+margin-top:20px;
+cursor:pointer;
+background:#ef4444;
+color:white;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+.retour{
+background:#2563eb;
+}
+
+</style>
+
 </head>
-  
+
 <body>
 
-<h1>Signaler une situation anonymement</h1>
+<div class="container">
 
-<p>Tu peux expliquer ta situation ici. Tu n'es pas obligé de donner ton nom.</p>
+<h1>🚨 Signaler une situation</h1>
 
-<form action="https://formspree.io/f/https://formspree.io/f/xyknppbg" method="POST">
+<p>Explique ta situation. Tu peux rester totalement anonyme.</p>
 
-<label>Décris la situation :</label><br>
-<textarea name="message" rows="6" cols="40"></textarea>
+<form action="https://formspree.io/f/xyknppbg" method="POST">
 
-<br><br>
+<label>Décris la situation :</label>
+<textarea name="message"></textarea>
 
-<label>Depuis combien de temps ?</label><br>
+<label>Depuis combien de temps ?</label>
 <input type="text" name="duree">
 
-<br><br>
-
-<label>Lieu (classe, réseaux sociaux, etc)</label><br>
+<label>Lieu (classe, réseaux sociaux...)</label>
 <input type="text" name="lieu">
 
-<br><br>
-
-<label>Si tu veux être recontacté (optionnel)</label><br>
+<label>Si tu veux être recontacté (optionnel)</label>
 <input type="email" name="email">
-
-<br><br>
 
 <button type="submit">Envoyer le message</button>
 
 </form>
+
+<a href="index.html">
+<button class="retour">⬅ Retour</button>
+</a>
+
+</div>
 
 </body>
 </html>
