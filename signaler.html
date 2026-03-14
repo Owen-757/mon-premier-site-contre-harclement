@@ -1,18 +1,39 @@
-<!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/xyknppbg"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
-  <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Signaler une situation</title>
+</head>
+
+<body>
+
+<h1>Signaler une situation anonymement</h1>
+
+<p>Tu peux expliquer ta situation ici. Tu n'es pas obligé de donner ton nom.</p>
+
+<form action="https://formspree.io/f/xyknppbg" method="POST">
+
+<label>Décris la situation :</label><br>
+<textarea name="message" rows="6" cols="40"></textarea>
+
+<br><br>
+
+<label>Depuis combien de temps ?</label><br>
+<input type="text" name="duree">
+
+<br><br>
+
+<label>Lieu (classe, réseaux sociaux, etc)</label><br>
+<input type="text" name="lieu">
+
+<br><br>
+
+<label>Si tu veux être recontacté (optionnel)</label><br>
+<input type="email" name="email">
+
+<br><br>
+
+<button type="submit">Envoyer le message</button>
+
 </form>
 
 </body>
