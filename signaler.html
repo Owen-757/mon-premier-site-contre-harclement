@@ -19,17 +19,17 @@ display:flex;
 justify-content:center;
 align-items:center;
 min-height:100vh;
-text-align:center;
 }
 
-/* carte centrale */
+/* carte */
 
 .container{
 max-width:500px;
-padding:30px;
+width:90%;
+padding:35px;
 background:#1e293b;
 border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+box-shadow:0 15px 40px rgba(0,0,0,0.5);
 }
 
 /* texte */
@@ -37,28 +37,35 @@ box-shadow:0 10px 30px rgba(0,0,0,0.4);
 h1{
 font-size:28px;
 margin-bottom:10px;
+text-align:center;
 }
 
 p{
 font-size:16px;
 opacity:0.85;
+text-align:center;
+}
+
+.info{
+font-size:13px;
+opacity:0.7;
 margin-bottom:20px;
+text-align:center;
 }
 
 /* labels */
 
 label{
 display:block;
-margin-top:15px;
-font-size:15px;
-text-align:left;
-opacity:0.9;
+margin-top:18px;
+font-size:14px;
 }
 
 /* champs */
 
-textarea, input{
-  select{
+textarea,
+input,
+select{
 width:100%;
 padding:14px;
 margin-top:6px;
@@ -67,8 +74,11 @@ border:none;
 background:#334155;
 color:white;
 font-size:15px;
+box-sizing:border-box;
 }
-  
+
+/* textarea */
+
 textarea{
 min-height:120px;
 resize:none;
@@ -89,15 +99,16 @@ padding:16px;
 font-size:17px;
 border:none;
 border-radius:12px;
-margin-top:20px;
+margin-top:22px;
 cursor:pointer;
 transition:0.2s;
 }
 
 button:hover{
 transform:scale(1.03);
-opacity:0.95;
 }
+
+/* boutons couleurs */
 
 .envoyer{
 background:#ef4444;
@@ -107,13 +118,6 @@ color:white;
 .retour{
 background:#2563eb;
 color:white;
-}
-
-/* message sécurité */
-
-.info{
-font-size:13px;
-opacity:0.7;
 margin-top:10px;
 }
 
@@ -132,7 +136,7 @@ Explique ce qu’il se passe. Tu peux rester totalement anonyme.
 </p>
 
 <p class="info">
-🔒 Ton message peut être envoyé sans donner ton nom.
+🔒 Chaque message est lu avec attention.
 </p>
 
 <form action="https://formspree.io/f/xyknppbg" method="POST">
@@ -146,23 +150,20 @@ Explique ce qu’il se passe. Tu peux rester totalement anonyme.
 <input type="text" name="duree" placeholder="ex : quelques semaines">
 
 <label>Lieu (classe, réseaux sociaux...)</label>
-<input type="text" name="lieu" placeholder="ex : classe, Instagram...">
+<input type="text" name="lieu" placeholder="ex : classe, Instagram">
 
 <label>Si tu veux être recontacté (optionnel)</label>
 <input type="email" name="email" placeholder="ton email (facultatif)">
+
 <label>Comment te sens-tu par rapport à la situation ? (facultatif)</label>
 
 <select name="urgence">
-
 <option value="">Choisir une option</option>
-
 <option value="urgent">🔴 J’ai besoin d’aide rapidement</option>
-
 <option value="difficile">🟠 La situation est difficile</option>
-
 <option value="parler">🟢 Je veux simplement en parler</option>
-
 </select>
+
 <button class="envoyer" type="submit">
 Envoyer le message
 </button>
