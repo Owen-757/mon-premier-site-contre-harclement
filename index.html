@@ -1,34 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Aide Harcèlement</title>
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background: #0f172a;
+color: white;
+margin:0;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+.container{
+max-width:500px;
+padding:25px;
+}
+
+h1{
+font-size:32px;
+margin-bottom:15px;
+}
+
+p{
+font-size:18px;
+opacity:0.9;
+margin-bottom:30px;
+}
+
+button{
+width:100%;
+padding:18px;
+font-size:18px;
+border:none;
+border-radius:12px;
+margin-top:15px;
+cursor:pointer;
+}
+
+.signaler{
+background:#ef4444;
+color:white;
+}
+
+.ressources{
+background:#2563eb;
+color:white;
+}
+
+button:hover{
+opacity:0.9;
+}
+
+footer{
+margin-top:30px;
+font-size:14px;
+opacity:0.6;
+}
+
+</style>
+
 </head>
-  <style>
-        body {
-            font-family: 'Arial', sans-serif; /* Police */
-            background-color: #000000;          /* Couleur de fond */
-            color: #FFFFFF;                     /* Couleur du texte */
-            padding: 20px;                      /* Pour un peu d'espace autour */
-        }
-    </style>
 
 <body>
 
-<h1>Plateforme d’aide contre le harcèlement</h1>
+<div class="container">
 
-<p>Ce site permet aux élèves de parler anonymement et de demander de l’aide.</p>
+<h1>Plateforme d’aide</h1>
 
-<h2>Que veux-tu faire ?</h2>
+<p>
+Tu peux signaler une situation de harcèlement anonymement et demander de l'aide.
+</p>
 
 <a href="signaler.html">
-<button>Signaler une situation</button>
+<button class="signaler">🚨 Signaler une situation</button>
 </a>
-
-<br><br>
 
 <a href="ressources.html">
-<button>Voir les ressources d’aide</button>
+<button class="ressources">📞 Voir les ressources d’aide</button>
 </a>
+
+<footer>
+Projet d’aide aux élèves
+</footer>
+
+</div>
 
 </body>
 </html>
