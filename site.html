@@ -10,7 +10,6 @@
 
 <style>
 
-
 .background{
 position:fixed;
 top:0;
@@ -29,14 +28,9 @@ animation:float 25s linear infinite;
 }
 
 @keyframes float{
-0%{
-transform:translateY(100vh);
+0%{transform:translateY(100vh);}
+100%{transform:translateY(-10vh);}
 }
-100%{
-transform:translateY(-10vh);
-}
-}
-
 
 body{
 font-family: Arial, sans-serif;
@@ -50,7 +44,6 @@ min-height:100vh;
 text-align:center;
 }
 
-
 .container{
 max-width:500px;
 padding:30px;
@@ -58,7 +51,6 @@ background:#1e293b;
 border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
-
 
 h1{
 font-size:32px;
@@ -70,7 +62,6 @@ font-size:18px;
 opacity:0.9;
 margin-bottom:30px;
 }
-
 
 button{
 width:100%;
@@ -88,20 +79,10 @@ transform:scale(1.03);
 opacity:0.95;
 }
 
-.signaler{
-background:#ef4444;
-color:white;
-}
-
-.ressources{
-background:#2563eb;
-color:white;
-}
-
-.appel{
-background:#22c55e;
-color:white;
-}
+.signaler{background:#ef4444;color:white;}
+.ressources{background:#2563eb;color:white;}
+.appel{background:#22c55e;color:white;}
+.parler{background:#a855f7;color:white;}
 
 footer{
 margin-top:30px;
@@ -117,13 +98,11 @@ opacity:0.6;
 
 <!-- Fond animé -->
 <div class="background">
-
 <div class="circle" style="width:80px;height:80px;left:10%;animation-duration:25s"></div>
 <div class="circle" style="width:40px;height:40px;left:30%;animation-duration:18s"></div>
 <div class="circle" style="width:60px;height:60px;left:50%;animation-duration:22s"></div>
 <div class="circle" style="width:100px;height:100px;left:70%;animation-duration:30s"></div>
 <div class="circle" style="width:50px;height:50px;left:85%;animation-duration:20s"></div>
-
 </div>
 
 <div class="container">
@@ -152,11 +131,39 @@ Tu peux signaler une situation de harcèlement anonymement et demander de l'aide
 <button class="appel">📞 Appeler le 3018</button>
 </a>
 
+<button class="parler" onclick="ouvrirChat()">
+💬 J'ai juste envie de parler
+</button>
+
 <footer>
 Projet d’aide aux élèves
 </footer>
 
 </div>
+
+<script>
+
+function ouvrirChat(){
+if(typeof Tawk_API !== "undefined"){
+Tawk_API.maximize();
+}
+}
+
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69b72e661a55ed1c3511a485/1jjpoqg70';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
 </body>
 </html>
