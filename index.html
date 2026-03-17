@@ -10,7 +10,6 @@
 
 <style>
 
-/* IMPORTANT pour éviter les décalages */
 *{
 box-sizing:border-box;
 }
@@ -25,26 +24,46 @@ display:flex;
 justify-content:center;
 align-items:center;
 
-min-height:100vh; /* corrigé */
+min-height:100vh;
 text-align:center;
 
-padding:15px; /* AJOUT */
+padding:15px;
 overflow:hidden;
 }
 
-/* carte centrale */
+/* carte */
 
 .box{
 background:#1e293b;
-padding:25px; /* un peu réduit pour mobile */
+padding:25px;
 border-radius:20px;
 
-width:100%; /* IMPORTANT */
+width:100%;
 max-width:500px;
 
 box-shadow:0 15px 40px rgba(0,0,0,0.5);
 animation:apparition 1s ease;
 z-index:2;
+}
+
+/* LOGO */
+
+.logo{
+width:120px;
+margin-bottom:15px;
+animation:zoom 1s ease;
+}
+
+/* animation logo */
+@keyframes zoom{
+from{
+transform:scale(0.7);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
 }
 
 /* animation apparition */
@@ -62,7 +81,7 @@ transform:translateY(0);
 
 h1{
 margin-bottom:20px;
-font-size:26px; /* mieux mobile */
+font-size:26px;
 }
 
 p{
@@ -70,8 +89,6 @@ opacity:0.85;
 line-height:1.6;
 font-size:15px;
 }
-
-/* bouton */
 
 button{
 margin-top:25px;
@@ -92,15 +109,13 @@ transform:scale(1.05);
 box-shadow:0 10px 25px rgba(37,99,235,0.5);
 }
 
-/* checkbox */
-
 .check{
 margin-top:20px;
 font-size:14px;
 opacity:0.9;
 }
 
-/* fond bulles corrigé */
+/* bulles */
 
 .background{
 position:fixed;
@@ -147,6 +162,9 @@ opacity:0;
 
 <div class="box">
 
+<!-- LOGO AJOUTÉ ICI -->
+<img src="logo.png" alt="Logo anti-harcèlement" class="logo">
+
 <h1>Information importante</h1>
 
 <p>
@@ -175,8 +193,6 @@ J'ai compris que ce site doit être utilisé uniquement pour demander de l'aide
 </a>
 
 </div>
-
-<!-- bulles -->
 
 <div class="background">
 <div class="circle"></div>
